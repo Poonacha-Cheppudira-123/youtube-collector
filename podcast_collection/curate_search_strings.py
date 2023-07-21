@@ -32,5 +32,6 @@ def curate_search_string(
     search_query = (
         f"{cmo_adjective} {cmo_phrase_variation} on {cmo_responsibility} {media_type}"
     )
+    print(f"Search Query: {search_query}\n")
 
     return search_query

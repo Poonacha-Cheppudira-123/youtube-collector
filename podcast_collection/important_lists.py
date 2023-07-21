@@ -1,6 +1,5 @@
 cmo_phrase_variations = [
     "CMO",
-    "cmo",
     "Chief Marketing Officer",
     "chief marketing officer",
     "Chief marketing officer",
