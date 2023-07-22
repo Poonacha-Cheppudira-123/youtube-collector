@@ -12,7 +12,8 @@ VERIFICATION_REGEX = r"\b(cmo|chief marketing officer)\b"
 
 
 def find_video_and_extract_info(search_query: str) -> dict:
-    """Finds a video on YouTube using the given search query and extracts relevant information.
+    """
+    Finds a video on YouTube using the given search query and extracts relevant information.
 
     Args:
         search_query (str): The search query to find the video on YouTube.
@@ -65,12 +66,9 @@ def verify_video_info(youtube_info: dict) -> str:
 
     if is_video_title_verified is True or is_video_description_verified is True:
         verified_url = youtube_info["video_url"]
-        print(verified_url)
     elif is_channel_title_verified is True:
         verified_url = youtube_info["channel_url"]
-        print(verified_url)
     else:
         verified_url = "This video is not related to Chief Marketing Officers"
-        print("Searching for another query...")
 
     return verified_url

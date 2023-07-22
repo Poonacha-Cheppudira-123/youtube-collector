@@ -2,7 +2,7 @@ import yt_dlp
 
 
 def download_youtube(
-    url: str, video_title: str, rate_limit=5000000, my_format="best[ext=mp4]"
+    url: str, secure_file_name: str, rate_limit=5000000, my_format="best[ext=mp4]"
 ) -> str:
     """
     Download a YouTube video, channel, or playlist based on the provided URL.
@@ -17,7 +17,7 @@ def download_youtube(
         str: The file path where the video or channel/playlist is downloaded.
     """
 
-    file_path = "C:/Users/azs547/Code/cmo-podcast-collection/"
+    file_path = "C:/Users/azs547/Code/cmo-podcast-collection/raw_videos"
     ydl_opts = None
 
     if url.startswith("https://www.youtube.com/@"):
@@ -32,8 +32,7 @@ def download_youtube(
     elif url.startswith(
         "https://www.youtube.com/watch",
     ):
-        formatted_title = video_title.replace(" ", "_")
-        file_path += formatted_title
+        file_path += secure_file_name
         ydl_opts = {
             "ignoreerrors": True,
             "abort_on_unavailable_fragments": True,

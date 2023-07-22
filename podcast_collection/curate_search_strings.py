@@ -7,16 +7,17 @@ def curate_search_string(
     cmo_adjectives: list,
     cmo_responsibilities: list,
 ) -> str:
-    """Randomize important lists, retrieve random str from each list, and append to search string
+    """
+    Randomize important lists, retrieve random str from each list, and append to search string.
 
     Args:
-        cmo_phrase_variations (list): A list of different words for CMO
-        media_types (list): A list of video/audio types
-        cmo_adjectives (list): A list of adjectives describing
-        cmo_responsibilities (list): A list of tasks CMOs engage in
+        cmo_phrase_variations (list): A list of different words for CMO.
+        media_types (list): A list of video/audio types.
+        cmo_adjectives (list): A list of adjectives describing.
+        cmo_responsibilities (list): A list of tasks CMOs engage in.
 
     Returns:
-        str: A formatted search query created by concatenated, random elements from the lists
+        str: A formatted search query created by concatenated, random elements from the lists.
     """
 
     random.shuffle(cmo_phrase_variations)
@@ -32,6 +33,5 @@ def curate_search_string(
     search_query = (
         f"{cmo_adjective} {cmo_phrase_variation} on {cmo_responsibility} {media_type}"
     )
-    print(f"Search Query: {search_query}\n")
 
     return search_query
