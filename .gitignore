@@ -1,2 +1,3 @@
 .venv
-cmo_videos
+raw_videos
+__pycache__

@@ -13,10 +13,9 @@ from podcast_collection.retrieve_valid_url import (
 )
 from podcast_collection.download_video import download_youtube
 
-# TODO: Fix file path curation and download issues
-
 
 def main() -> None:
+    """Downloads a specified number of YouTube videos related to Chief Marketing Officers (CMOs)."""
     verified_url_list = []
     num_of_desired_videos = int(input("Specify the number of urls you want: "))
     count = 0
@@ -36,7 +35,7 @@ def main() -> None:
 
     secure_file_name = ""
     video_title = youtube_info["video_title"]
-    formatted_title = video_title.replace(" ", "")
+    formatted_title = video_title.replace(" ", "_")
     secure_file_name = f"{uuid.uuid4().hex}-{formatted_title}"
 
     file_path = ""

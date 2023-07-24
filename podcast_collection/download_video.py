@@ -17,7 +17,7 @@ def download_youtube(
         str: The file path where the video or channel/playlist is downloaded.
     """
 
-    file_path = "C:/Users/azs547/Code/cmo-podcast-collection/raw_videos"
+    file_path = "raw_videos/"
     ydl_opts = None
 
     if url.startswith("https://www.youtube.com/@"):
